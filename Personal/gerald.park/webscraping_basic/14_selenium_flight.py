@@ -3,8 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from webdriver_manager.chrome import ChromeDriverManager
 
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(ChromeDriverManager().install()) 
 browser.maximize_window() # 창 최대화
 
 url = "https://flight.naver.com/flights/"
