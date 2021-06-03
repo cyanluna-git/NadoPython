@@ -1,5 +1,7 @@
 from selenium import webdriver
-browser = webdriver.Chrome()
+from webdriver_manager.chrome import ChromeDriverManager
+
+browser = webdriver.Chrome(ChromeDriverManager().install()) 
 browser.maximize_window()
 
 # 페이지 이동

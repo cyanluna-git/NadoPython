@@ -1,6 +1,7 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
-options = webdriver.ChromeOptions()
+options = webdriver.ChromeOptions(ChromeDriverManager().install())
 options.headless = True
 options.add_argument("window-size=1920x1080")
 

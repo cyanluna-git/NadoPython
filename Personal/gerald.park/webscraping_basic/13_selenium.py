@@ -1,7 +1,8 @@
 import time
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
-browser = webdriver.Chrome() # "./chromedriver.exe"
+browser = webdriver.Chrome(ChromeDriverManager().install()) # "./chromedriver.exe"
 
 # 1. 네이버 이동
 browser.get("http://naver.com")
@@ -11,8 +12,8 @@ elem = browser.find_element_by_class_name("link_login")
 elem.click()
 
 # 3. id, pw 입력
-browser.find_element_by_id("id").send_keys("naver_id")
-browser.find_element_by_id("pw").send_keys("password")
+browser.find_element_by_id("id").send_keys("kainhide")
+browser.find_element_by_id("pw").send_keys("5anfrnskan!")
 
 # 4. 로그인 버튼 클릭
 browser.find_element_by_id("log.login").click()
