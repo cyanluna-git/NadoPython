@@ -14,12 +14,12 @@
 #     print("걸어가라")
 
 # *******이거 다시 보기 이해 안감.........******************
-# money = 2000
-# card=1
-# if money >=3000 | card :
-#     print("택시를 타고 가라")
-# else:
-#     print("걸어가라")
+money = 2000
+card=1
+if (money >= 3000) | card :
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
 
 # money = 2000
 # card=1
@@ -71,12 +71,12 @@
 #         break #break를 써서 while문을 종료시키는것 
 
 #while and continue
-a=0
-while a<10:
-    a = a+1
-    if a %2 == 0:
-        continue #continue 조건을 만족하면(여기서는 짝수이면~~) 그 밑으로 넘어가지 않고 while 문의 처음오로 가서 다시 반복
-    print(a)
+# a=0
+# while a<10:
+#     a = a+1
+#     if a %2 == 0:
+#         continue #continue 조건을 만족하면(여기서는 짝수이면~~) 그 밑으로 넘어가지 않고 while 문의 처음오로 가서 다시 반복
+#     print(a)
 
-#무한루프에서 ctrl + c 하면 실행중지 (=keyboard interrupt)
+# #무한루프에서 ctrl + c 하면 실행중지 (=keyboard interrupt)
 
