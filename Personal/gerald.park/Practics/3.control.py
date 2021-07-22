@@ -53,14 +53,14 @@
 # else: # 아니면 ~ 앞에조건이 다 False이면 실행하는 제어문 
 #     print("걸어가라")
 
-score = 70
-if score > 60:
-    message = 'success'
-else:
-    message = 60 
+# score = 70
+# if score > 60:
+#     message = 'success'
+# else:
+#     message = 60 
 
 # 위에 5줄을 한줄로 만들기 
-message = "success" if score > 60 else "failure" # 조건연산자 한줄에 if문 다쓰기. 
+# message = "success" if score > 60 else "failure" # 조건연산자 한줄에 if문 다쓰기. 
 
 # 반복문 
 
@@ -68,13 +68,27 @@ message = "success" if score > 60 else "failure" # 조건연산자 한줄에 if�
 ## Lisa님 코드 올려주신거 확인했어요 수고하셨습니다~ 
 
 #while 
-treeHit = 0 
-while treeHit < 10:
-    treeHit = treeHit + 1
-    print("나무를 %d번 찍었습니다." % treeHit)
-    if treeHit == 10:
-        print("나무가 넘어갑니다.")
+# treeHit = 0 
+# while treeHit < 10:
+#     treeHit = treeHit + 1
+#     print("나무를 %d번 찍었습니다." % treeHit)
+#     if treeHit == 10:
+#         print("나무가 넘어갑니다.")
 
 # 디버깅은 예상안했는데 이것까지 알려주네요.ㅎㅎ 
 # 종료 2분 전입니다~ 
 # 실습해보시고 이해안가는 부분이 있으면 물어봐주세요. 
+# 오늘 실습은 여기까지 하겠습니다~~ 
+
+# a = 0 
+# while a < 10:
+# 	a = a + 1
+# 	if a % 2 == 0 : 
+# 		continue
+# 	print(a) 
+# # 홀수만 출력
+
+# # 무한루프 
+# while True:
+# 	print('무한루프') # 종료하려면 컨트롤 + C 
+
