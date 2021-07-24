@@ -6,6 +6,13 @@
 # avg = (eng + kor + mat)/3
 
 # scores = [80,75,55]
+# total = 0
+# for val in scores:
+#     total = total + val
+# avg = total / len(scores)
+# print("평균점수 : {0}".format(avg))
+
+# scores = [80,75,55]
 # total = sum(scores)
 # avg = total / len(scores)
 # print("평균점수 : {0}".format(avg))
@@ -55,6 +62,6 @@
 # print(s)
 
 # 12. reference 
-a = b = [1, 2, 3]
-a[1] = 4
-print(b)
+# a = b = [1, 2, 3]
+# a[1] = 4
+# print(b)

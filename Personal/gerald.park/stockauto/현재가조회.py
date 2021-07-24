@@ -1,4 +1,6 @@
 import win32com.client
+
+# 크레온 Auto 
  
 # 연결 여부 체크
 objCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
