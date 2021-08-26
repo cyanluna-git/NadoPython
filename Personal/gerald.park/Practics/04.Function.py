@@ -53,7 +53,7 @@
 # profile("김태호", 26, "Kotlin", "swift")
 
 # 전역변수 사용 
-gun = 10
+# gun = 10
 # def checkpoint(soldiers):
 #     global gun # 전역공간에 있는 gub 을 사용함. 
 #     gun = gun - soldiers
@@ -63,9 +63,30 @@ gun = 10
 # checkpoint(2)
 # print("남은 총 : {0}".format(gun))
 
-def checkpoint_ret(gun, soldiers):
-    gun = gun - soldiers
-    print("[함수내] 남은 총: {0}".format(gun))
-    return gun
+# def checkpoint_ret(gun, soldiers):
+#     gun = gun - soldiers
+#     print("[함수내] 남은 총: {0}".format(gun))
+#     return gun
 
-gun = checkpoint_ret(gun, 2)
+# gun = checkpoint_ret(gun, 2)
+# print("남은 총 : {0}".format(gun))
+
+# Quiz) 표준 체중을 구하는 프로그램 
+# * 표준 체중 : 각 개인의 키에 적당한 체중 
+
+# (성별에 따른 공식)
+# 남자 : 키^2 * 22
+# 여자 : 키^2 * 21
+
+
+def std_weight(height, gender): # 키는 m 단위 
+    if gender == "남자":
+        return height * height * 22
+    else:
+        return height * height * 21
+
+height = 179 #cm 단위 
+gender = "남자"
+weight = std_weight(height / 100, gender)
+
+print("키 {0}cm {1}의 표준체중은 {2}kg 입니다.".format(height, gender, weight))
