@@ -21,6 +21,6 @@ def is_prime(number):
 number = int(input('범위를 입력하세요 : '))
 start_time = time.time()
 print('1부터 {0}까지 소수들의 집합 : {1}'.format(number,is_prime(number)))
-print('소요시간: {0}초'.format(round(time.time() - start_time,7)))
+print('소요시간: {0}초'.format(time.time() - start_time))
 
 
