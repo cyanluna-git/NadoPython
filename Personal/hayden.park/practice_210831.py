@@ -8,7 +8,7 @@ def is_prime(number):
 
     for i in range(2,n+1):  # 2부터 최대 소수 범위까지만 탐색 시작
         if primelist[i] == True:    # 리스트가 True 이면 i를 소수로 인식
-            for j in range(i+i, number,i):  # 1~number 범위엥서 소수 i의 배수들을 검색
+            for j in range(i+i, number,i):  # 1~number 범위에서 소수 i의 배수들을 검색
                 primelist[j] = False    # 소수 i의 배수들을 False 로 변경, 소수가 아니므로 리스트에서 제외
     
     prime_numbers=[]
