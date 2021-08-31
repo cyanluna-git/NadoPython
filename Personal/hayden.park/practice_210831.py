@@ -11,8 +11,12 @@ def is_prime(number):
             for j in range(i+i, number,i):  # 1~number 범위엥서 소수 i의 배수들을 검색
                 primelist[j] = False    # 소수 i의 배수들을 False 로 변경, 소수가 아니므로 리스트에서 제외
     
-    return [prime for prime in range(2,number) if primelist[prime]==True] # 앞서 만들어진 리스트에서 True 인 Index 반환
+    prime_numbers=[]
+    for prime in range(2,number):
+        if primelist[prime]==True:
+            prime_numbers.append(prime)
 
+    return prime_numbers
 
 number = int(input('범위를 입력하세요 : '))
 start_time = time.time()
