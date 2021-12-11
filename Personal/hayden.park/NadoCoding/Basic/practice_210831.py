@@ -5,6 +5,7 @@ import time
 def is_prime(number):
     primelist = [True] * number # 1부터 number 크기만큼의 True 리스트 선언
     n = int(number**0.5)   # 검색에 사용할 최대 소수는 sqrt(number) 보다 작거나 같다
+    print(primelist)
 
     for i in range(2,n+1):  # 2부터 최대 소수 범위까지만 탐색 시작
         if primelist[i] == True:    # 리스트가 True 이면 i를 소수로 인식
