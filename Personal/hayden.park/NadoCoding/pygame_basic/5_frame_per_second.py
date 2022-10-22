@@ -37,8 +37,8 @@ while(running):
     # 캐릭터가 100 만큼 이동을 해야함
     # 10 fps : 1초 동안에 10번 동작 -> 한번에 10 만큼 이동
     # 20 fps : 1초 동안에 20번 동작 -> 한번에 5 만큼 이동
+    # print("fps : " + str(clock.get_fps()))
 
-    print("fps : " + str(clock.get_fps()))
     for event in pygame.event.get():
         if event.type == pygame.QUIT: # 창이 닫히는 이벤트 발생여부 확인
             running = False
