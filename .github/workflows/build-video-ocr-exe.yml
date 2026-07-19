@@ -1,0 +1,50 @@
+name: Build Video OCR Extractor .exe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Personal/Jess.Kim/video_ocr_extractor/**"
+      - ".github/workflows/build-video-ocr-exe.yml"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Personal/Jess.Kim/video_ocr_extractor
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build .exe
+        run: |
+          pyinstaller `
+            --name VideoOCRExtractor `
+            --onefile `
+            --noconfirm `
+            --add-data "app.py;." `
+            --add-data ".streamlit;.streamlit" `
+            --collect-all streamlit `
+            --collect-all streamlit_drawable_canvas `
+            --collect-all pytesseract `
+            --collect-all cv2 `
+            --collect-all fpdf `
+            --hidden-import streamlit_drawable_canvas `
+            run_app.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VideoOCRExtractor-windows
+          path: Personal/Jess.Kim/video_ocr_extractor/dist/VideoOCRExtractor.exe
+          retention-days: 30
