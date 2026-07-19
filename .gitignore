@@ -1,1 +1,7 @@
 .DS_Store
+__pycache__/
+*.pyc
+venv/
+Personal/Jess.Kim/video_ocr_extractor/build/
+Personal/Jess.Kim/video_ocr_extractor/dist/
+Personal/Jess.Kim/video_ocr_extractor/*.spec
